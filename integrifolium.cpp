@@ -12,12 +12,15 @@ class Integrifolium {
   private:
     T *i;
   public:
+    // parameterized constructor
     Integrifolium(T _i_ = 0) {
       i = new T(_i_);
     }
+    // copy constructor
   	Integrifolium(const Integrifolium& other) {
       i = new T(*other.i);
     }
+    // move constructor
   	Integrifolium(const Integrifolium&& other) {
       i = other.i;
     }
